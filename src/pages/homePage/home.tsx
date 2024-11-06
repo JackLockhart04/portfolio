@@ -29,7 +29,7 @@ const Home: React.FC = () => {
         <div className="homeProjectGrid">
           <ProjectCard
             name="StocksInSeconds.com"
-            projectLink="/project/stocksinseconds"
+            projectLink="/projects/stocksinseconds"
             image={`${process.env.PUBLIC_URL}/stocksInSeconds.png`}
             skills={"Python, Flask, Javascript, AWS services, APIs"}
             description="Full stack website for a startup business"
