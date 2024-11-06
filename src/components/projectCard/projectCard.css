@@ -1,0 +1,71 @@
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  width: 25%; /* Adjust width to fit 4 cards horizontally with some margin */
+  height: 400px;
+  /* margin: 1%; */
+  background-color: #121212;
+  border: 2px solid #ffffff;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.projectCardImageSection {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.projectCardImage {
+  width: 100%;
+  object-fit: contain; /* Maintain original dimensions */
+}
+
+.projectCardSkillsSection {
+  padding: 0 10px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  color: #b0b0b0;
+  width: auto;
+}
+
+.projectCardDescriptionSection {
+  /* flex-grow: 1; */
+  padding: 10px;
+  text-align: left;
+  width: auto;
+}
+
+.projectCardName {
+  font-size: 1.5rem; /* Larger font size for the project name */
+  margin: 0;
+}
+
+.projectCardDescription {
+  font-size: 0.875rem; /* Smaller font size for the description */
+  color: #b0b0b0; /* Less bright text color */
+  margin-top: 5px;
+}
+
+.projectCardLinkSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectCardButton {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue background color */
+  color: #ffffff; /* White text color */
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.projectCardButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
