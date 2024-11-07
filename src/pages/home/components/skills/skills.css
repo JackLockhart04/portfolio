@@ -1,0 +1,40 @@
+.homeSkillsSection {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+.homeSkillsHeader {
+  text-align: left; /* Align the skills header to the left */
+  margin-left: 20px; /* Add some left margin for better alignment */
+}
+
+.homeSkillsCategory {
+  margin-bottom: 20px;
+}
+
+.homeSkillsCategory h3 {
+  text-align: left; /* Align the category headers to the left */
+  margin-left: 20px; /* Add some left margin for better alignment */
+}
+
+.homeSkillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items */
+  gap: 20px; /* Add space between items */
+  padding: 20px;
+}
+
+.homeSkillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.homeSkillLogo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}

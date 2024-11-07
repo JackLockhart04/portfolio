@@ -1,7 +1,10 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import "./home.css";
-import ProjectCard from "../../components/projectCard/projectCard";
+import StocksInSecondsCard from "../../components/projectCards/stocksInSeconds/stocksInSecondsCard";
+import Skills from "./components/skills/skills";
 
 const Home: React.FC = () => {
   return (
@@ -19,27 +22,23 @@ const Home: React.FC = () => {
         <div id="headshotSection">
           <img
             src={`${process.env.PUBLIC_URL}/myPic.jpg`}
-            alt="My Picture"
+            alt="Me"
             className="myPic"
           />
         </div>
       </div>
       <div className="homeProjectsSection">
-        <h2>Projects</h2>
+        <div className="homeProjectsHeader">
+          <h2>Projects</h2>
+          <Link to="/projects" className="seeAllProjectsLink">
+            See all projects
+          </Link>
+        </div>
         <div className="homeProjectGrid">
-          <ProjectCard
-            name="StocksInSeconds.com"
-            projectLink="/projects/stocksinseconds"
-            image={`${process.env.PUBLIC_URL}/stocksInSeconds.png`}
-            skills={"Python, Flask, Javascript, AWS services, APIs"}
-            description="Full stack website for a startup business"
-          />
+          <StocksInSecondsCard />
         </div>
       </div>
-      <div className="homeSkillsSection">
-        <h2>Skills</h2>
-        <div className="homeSkillsGrid"></div>
-      </div>
+      <Skills />
     </div>
   );
 };

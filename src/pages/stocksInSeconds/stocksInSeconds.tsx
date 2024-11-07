@@ -8,7 +8,7 @@ const StocksInSeconds: React.FC = () => {
       <div className="imageSection">
         <img
           src={`${process.env.PUBLIC_URL}/stocksInSeconds.png`}
-          alt="Project Image"
+          alt="Project"
           className="projectImage"
         />
       </div>

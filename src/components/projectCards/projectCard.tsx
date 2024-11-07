@@ -1,4 +1,7 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
+
 import "./projectCard.css";
 
 interface ProjectCardProps {
@@ -19,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="projectCard">
       <div className="projectCardImageSection">
-        <img src={image} alt="Project Image" className="projectCardImage" />
+        <img src={image} alt="Project" className="projectCardImage" />
       </div>
       <div className="projectCardSkillsSection">
         <p className="projectCardSkillsText">{skills}</p>
@@ -29,9 +32,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="projectCardDescription">{description}</p>
       </div>
       <div className="projectCardLinkSection">
-        <a href={projectLink} className="projectCardButton">
+        <Link to={projectLink} className="projectCardButton">
           View Project
-        </a>
+        </Link>
       </div>
     </div>
   );

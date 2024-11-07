@@ -46,16 +46,25 @@
   text-align: left;
 }
 
+.homeProjectsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seeAllProjectsLink {
+  color: #007bff; /* Blue color for the link */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.seeAllProjectsLink:hover {
+  text-decoration: underline;
+}
+
 .homeProjectGrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
-}
-
-.homeSkillsSection {
-  width: 100%;
-  max-width: 1200px;
-  margin: 40px auto;
-  text-align: left;
 }

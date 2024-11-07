@@ -10,7 +10,11 @@ const Navbar: React.FC = () => {
           Home
         </Link>
       </div>
-      <div className="navRight">{/* Add other links or items here */}</div>
+      <div className="navRight">
+        <Link to="/projects" className="navLink">
+          Projects
+        </Link>
+      </div>
     </nav>
   );
 };
