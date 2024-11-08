@@ -9,32 +9,38 @@
   margin-left: 20px; /* Add some left margin for better alignment */
 }
 
-.homeSkillsCategory {
-  margin-bottom: 20px;
-}
-
-.homeSkillsCategory h3 {
-  text-align: left; /* Align the category headers to the left */
-  margin-left: 20px; /* Add some left margin for better alignment */
-}
-
-.homeSkillsGrid {
+.homeSkillsGroupContainer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the items */
-  gap: 20px; /* Add space between items */
+  justify-content: space-around; /* Space out the groups evenly */
+  flex-wrap: wrap; /* Allow groups to wrap to the next line if needed */
   padding: 20px;
 }
 
-.homeSkillItem {
+.homeSkillsGroup {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px;
 }
 
-.homeSkillLogo {
-  width: 50px;
-  height: 50px;
+.homeSkillsGroupHeader {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
+}
+
+.homeSkillsGroupIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.homeSkillsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeSkillsList span {
+  margin: 5px 0;
 }
