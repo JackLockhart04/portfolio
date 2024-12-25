@@ -8,6 +8,7 @@ import ScrollToTop from "./components/scrollToTop/scrollToTop";
 import ContactFooter from "./components/contactFooter/contactFooter";
 import Home from "./pages/home/home";
 import ContactPage from "./pages/contact/contactPage";
+import Resume from "./pages/resume/resume";
 import Projects from "./pages/projects/projects";
 import StocksInSeconds from "./pages/stocksInSeconds/stocksInSeconds";
 
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
           <Route
             path="/projects/stocksinseconds"
