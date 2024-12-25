@@ -14,9 +14,10 @@ const Home: React.FC = () => {
           <h1>Jack Lockhart</h1>
           <p className="aboutMeParagraph">
             I am studying computer science at the University of Alabama. I am
-            interested in full stack development and cloud computing but also
-            have experience with development in C++. I am currently working on
-            making a videogame from scratch using C++.
+            interested in full stack development and cloud computing, especially
+            in python, but also have experience with development in C++. I am
+            currently working on a website with a backend built in C++ to force
+            myself to learn new technologies.
           </p>
         </div>
         <div id="headshotSection">

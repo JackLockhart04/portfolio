@@ -1,0 +1,47 @@
+.contactPageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  padding: 20px;
+  background-color: #121212; /* Dark background color */
+  color: #ffffff; /* Light text color */
+  min-height: 90vh; /* Ensure the container takes up the full height of the viewport */
+}
+
+.contactPageContainer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contactItem {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contactItem h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contactItem p {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.contactItem a {
+  color: #2c84ff; /* Light blue color for links */
+  text-decoration: none;
+}
+
+.contactItem a:hover {
+  text-decoration: underline;
+}

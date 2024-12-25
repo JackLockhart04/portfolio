@@ -1,7 +1,7 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  width: 25%; /* Adjust width to fit 4 cards horizontally with some margin */
+  width: 250px; /* Adjust width to fit 4 cards horizontally with some margin */
   height: 400px;
   /* margin: 1%; */
   background-color: #121212;
@@ -39,8 +39,8 @@
 }
 
 .projectCardName {
-  font-size: 1.5rem; /* Larger font size for the project name */
   margin: 0;
+  font-size: 1.3rem;
 }
 
 .projectCardDescription {
