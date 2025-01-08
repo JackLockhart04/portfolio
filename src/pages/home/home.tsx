@@ -16,8 +16,9 @@ const Home: React.FC = () => {
             I am studying computer science at the University of Alabama. I am
             interested in full stack development and cloud computing, especially
             in python, but also have experience with development in C++. I am
-            currently working on a website with a backend built in C++ to force
-            myself to learn new technologies.
+            currently working on a website to help me keep track of my classes
+            and grades while I am in school. I am using java and deploying to
+            AWS lambda and configuring by hand to learn AWS better.
           </p>
         </div>
         <div id="headshotSection">
