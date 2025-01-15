@@ -13,7 +13,8 @@ const Home: React.FC = () => {
         <div id="aboutMe" className="aboutMeText">
           <h1>Jack Lockhart</h1>
           <p className="aboutMeParagraph">
-            I am studying computer science at the University of Alabama. I am
+            I am studying computer science and cyber security at the University
+            of Alabama while planning on getting my MBA afterwards. I am
             interested in full stack development and cloud computing, especially
             in python, but also have experience with development in C++. I am
             currently working on a website to help me keep track of my classes
