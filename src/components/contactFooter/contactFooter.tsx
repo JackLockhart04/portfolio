@@ -27,6 +27,18 @@ const ContactFooter: React.FC = () => {
           </a>
         </p>
       </div>
+      <div className="contactFooterItem">
+        <h3>GitHub</h3>
+        <p>
+          <a
+            href="https://github.com/JackLockhart04"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub Profile
+          </a>
+        </p>
+      </div>
     </footer>
   );
 };

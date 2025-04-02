@@ -28,6 +28,18 @@ const Contact: React.FC = () => {
             </a>
           </p>
         </div>
+        <div className="contactItem">
+          <h2>GitHub</h2>
+          <p>
+            <a
+              href="https://github.com/JackLockhart04"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub Profile
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

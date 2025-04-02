@@ -4,7 +4,7 @@ import "./stocksInSeconds.css";
 const StocksInSeconds: React.FC = () => {
   return (
     <div className="stocksInSecondsContainer">
-      <h1 className="title">StocksInSeconds.com</h1>
+      <h1 className="title">StocksInSeconds.com (Taken offline)</h1>
       <div className="imageSection">
         <img
           src={`${process.env.PUBLIC_URL}/stocksInSeconds.png`}

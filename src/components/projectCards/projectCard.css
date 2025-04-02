@@ -43,6 +43,16 @@
   font-size: 1.3rem;
 }
 
+.projectCardNameLink {
+  text-decoration: none;
+  color: #2c84ff; /* Light blue color for the link */
+  transition: color 0.3s ease;
+}
+
+.projectCardNameLink:hover {
+  color: #1a5dbb; /* Darker blue on hover */
+}
+
 .projectCardDescription {
   font-size: 0.875rem; /* Smaller font size for the description */
   color: #b0b0b0; /* Less bright text color */

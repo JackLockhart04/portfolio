@@ -11,6 +11,7 @@ const StocksInSecondsCard: React.FC = () => {
       image={`${process.env.PUBLIC_URL}/stocksInSeconds.png`}
       skills={"Python, Flask, Javascript, AWS services, APIs"}
       description="Full stack website for a startup business"
+      siteLink="https://stocksinseconds.com/"
     />
   );
 };

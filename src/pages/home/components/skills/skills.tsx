@@ -31,8 +31,9 @@ const Skills: React.FC = () => {
             <h3>Backend</h3>
           </div>
           <div className="homeSkillsList">
-            <span>C++</span>
             <span>Python</span>
+            <span>Java</span>
+            <span>C++</span>
           </div>
         </div>
         <div className="homeSkillsGroup">
@@ -46,8 +47,9 @@ const Skills: React.FC = () => {
           </div>
           <div className="homeSkillsList">
             <span>Git</span>
-            <span>AWS</span>
-            <span>NoSQL</span>
+            <span>AWS (Lambda, CloudFront)</span>
+            <span>Oracle Cloud</span>
+            <span>Docker</span>
             <span>SQL</span>
           </div>
         </div>

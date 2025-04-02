@@ -10,6 +10,7 @@ interface ProjectCardProps {
   skills: string;
   description: string;
   projectLink: string;
+  siteLink: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -18,6 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   skills,
   description,
   projectLink,
+  siteLink,
 }) => {
   return (
     <div className="projectCard">
@@ -28,7 +30,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="projectCardSkillsText">{skills}</p>
       </div>
       <div className="projectCardDescriptionSection">
-        <h1 className="projectCardName">{name}</h1>
+        {siteLink ? (
+          <a
+            href={siteLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="projectCardNameLink"
+          >
+            <h2 className="projectCardName">{name}</h2>
+          </a>
+        ) : (
+          <h2 className="projectCardName">{name}</h2>
+        )}
         <p className="projectCardDescription">{description}</p>
       </div>
       <div className="projectCardLinkSection">
