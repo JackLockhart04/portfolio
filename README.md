@@ -1,38 +1,75 @@
-## Git commands
+# Jack Lockhart - Portfolio
 
-### Push all to git
+A modern, responsive portfolio website built with React and TypeScript showcasing my projects, skills, and professional experience.
 
-1. `git add .`
-2. `git commit -m "message"`
-3. `git push origin main`
+## Features
 
-## npm scripts
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Modern UI**: Clean, professional interface with smooth animations
+- **Project Showcase**: Detailed project pages with technologies used
+- **Contact Information**: Easy ways to get in touch
+- **Resume Integration**: Professional resume display
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- React 18
+- TypeScript
+- React Router DOM
+- CSS3 with custom styling
+- GitHub Pages for deployment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js (v14 or higher)
+- npm or yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jacklockhart04/portfolio.git
+   cd portfolio
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run deploy`
+## Available Scripts
 
-Builds the app and deploys to github pages
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm run deploy` - Builds and deploys to GitHub Pages
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+├── pages/              # Page components
+├── App.tsx             # Main application component
+└── index.tsx           # Application entry point
+```
+
+## Deployment
+
+The portfolio is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+ - Run `git add .`
+ - Run `git commit -m 'message'`
+ - Run `git push origin main`
+
+## Contact
+
+- **Email**: [Your email]
+- **LinkedIn**: [Your LinkedIn]
+- **GitHub**: [jacklockhart04](https://github.com/jacklockhart04)

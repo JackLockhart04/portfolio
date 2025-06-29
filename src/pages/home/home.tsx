@@ -1,11 +1,13 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 
-import "./home.css";
+// Components
 import StocksInSecondsCard from "../../components/projectCards/stocksInSeconds/stocksInSecondsCard";
-import Skills from "./components/skills/skills";
 import CourseGeniusCard from "../../components/projectCards/courseGenius/courseGeniusCard";
+import Skills from "./components/skills/skills";
+
+// Styles
+import "./home.css";
 
 const Home: React.FC = () => {
   return (
@@ -26,7 +28,7 @@ const Home: React.FC = () => {
         </div>
         <div id="headshotSection">
           <img
-            src={`${process.env.PUBLIC_URL}/myPic.jpg`}
+            src={`${process.env.PUBLIC_URL}/assets/profile/myPic.jpg`}
             alt="Me"
             className="myPic"
           />

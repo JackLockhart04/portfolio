@@ -7,7 +7,7 @@ const CourseGenius: React.FC = () => {
       <h1 className="title">CourseGenius.free.nf (In development)</h1>
       <div className="imageSection">
         <img
-          src={`${process.env.PUBLIC_URL}/courseGenius.png`}
+          src={`${process.env.PUBLIC_URL}/projects/course-genius/courseGenius.png`}
           alt="Project"
           className="projectImage"
         />
@@ -20,6 +20,14 @@ const CourseGenius: React.FC = () => {
           rel="noopener noreferrer"
         >
           Visit CourseGenius.free.nf
+        </a>
+        <a
+          href="https://github.com/JackLockhart04/course-genius"
+          className="projectLink"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on GitHub
         </a>
       </div>
       <div className="descriptionContainer">
