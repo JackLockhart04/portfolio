@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: center; /* Center content vertically */
   padding: 20px;
-  background-color: #121212; /* Dark background color */
-  color: #ffffff; /* Light text color */
+  background-color: var(--color-bg); /* Dark background color */
+  color: var(--color-text); /* Light text color */
   min-height: 90vh; /* Ensure the container takes up the full height of the viewport */
 }
 
@@ -38,7 +38,7 @@
 }
 
 .contactItem a {
-  color: #2c84ff; /* Light blue color for links */
+  color: var(--color-link); /* Link color */
   text-decoration: none;
 }
 

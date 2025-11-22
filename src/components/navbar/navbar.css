@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  background-color: #333; /* Dark background color */
-  color: white;
+  background-color: var(--color-header-bg); /* Dark background color */
+  color: var(--color-text);
   padding: 0 20px; /* Horizontal padding */
   position: sticky;
   top: 0;
@@ -12,12 +12,12 @@
 }
 
 .navLinkBox {
-  color: white; /* White text color for links */
+  color: var(--color-text); /* Text color for links */
   text-decoration: none;
   margin: 0 10px; /* Space between links */
   height: 75%;
   display: flex;
-  background-color: #303030;
+  background-color: var(--color-header-bg);
   border-radius: 5px;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .navLink {
-  color: white;
+  color: var(--color-text);
   text-decoration: none;
   padding: 0 20px;
   flex: 1;

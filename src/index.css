@@ -2,13 +2,29 @@
 
 :root {
   /* Color tokens — change these to update the site theme */
-  --color-bg: #121212;
-  --color-surface: #0f1720;
-  --color-text: #ffffff;
-  --color-muted: #b0b0b0;
-  --color-primary: #007bff;
-  --color-primary-foreground: #ffffff;
+  --color-bg: #121212; /* Page background */
+  --color-surface: #0f1720; /* Elevated surfaces (cards, panels) */
+  --color-text: #ffffff; /* Primary text color */
+  --color-muted: #b0b0b0; /* Muted / secondary text */
+  --color-primary: #007bff; /* Brand primary — CTAs #007bff; */
+  --color-primary-foreground: #ffffff; /* Text color on primary backgrounds */
 
+  /* Additional tokens for broader theming */
+  --color-secondary: #6c757d; /* Secondary accent color */
+  --color-accent: #ffd166; /* Decorative accents / highlights */
+  --color-link: #007bff; /* Link color */
+  --color-border: #1f2933; /* Borders and dividers */
+  --color-header-bg: #303030; /* Navbar / header background */
+  --color-footer-bg: #303030; /* Footer background */
+  --color-success: #16a34a; /* Success / positive states */
+  --color-warning: #f59e0b; /* Warning / attention */
+  --color-danger: #dc2626; /* Error / danger */
+  --color-focus: #80b7ff; /* Focus ring / accessibility outlines */
+  --color-surface-foreground: var(--color-text); /* Text color on surfaces */
+  --color-surface-variant: #1b1b1b; /* Alternate surface for cards */
+  --color-code-bg: #0b1220; /* Inline code / code block background */
+  --color-overlay: rgba(0, 0, 0, 0.6); /* Modal/backdrop overlay */
+  --color-primary-600: #0056b3; /* Darker primary (hover states) */
   /* Spacing scale */
   --space-xxs: 4px;
   --space-xs: 8px;

@@ -4,9 +4,9 @@
   width: 250px; /* Adjust width to fit 4 cards horizontally with some margin */
   height: 400px;
   /* margin: 1%; */
-  background-color: #121212;
-  border: 2px solid #ffffff;
-  color: rgb(255, 255, 255);
+  background-color: var(--color-surface-variant);
+  border: 1px solid var(--color-border);
+  color: var(--color-surface-foreground);
   overflow: hidden;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
@@ -25,9 +25,9 @@
 
 .projectCardSkillsSection {
   padding: 0 10px;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
-  color: #b0b0b0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-muted);
   width: auto;
 }
 
@@ -45,17 +45,17 @@
 
 .projectCardNameLink {
   text-decoration: none;
-  color: #2c84ff; /* Light blue color for the link */
+  color: var(--color-link); /* Link color */
   transition: color 0.3s ease;
 }
 
 .projectCardNameLink:hover {
-  color: #1a5dbb; /* Darker blue on hover */
+  color: var(--color-primary-600); /* Darker primary on hover */
 }
 
 .projectCardDescription {
   font-size: 0.875rem; /* Smaller font size for the description */
-  color: #b0b0b0; /* Less bright text color */
+  color: var(--color-muted); /* Less bright text color */
   margin-top: 5px;
 }
 
@@ -69,15 +69,15 @@
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #007bff; /* Blue background color */
-  color: #ffffff; /* White text color */
+  background-color: var(--color-primary); /* CTA background color */
+  color: var(--color-primary-foreground); /* CTA text color */
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
 .projectCardButton:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: var(--color-primary-600); /* Darker primary on hover */
 }
 
 .projectCardButton.secondary {
