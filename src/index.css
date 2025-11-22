@@ -51,3 +51,38 @@ code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New",
     monospace;
 }
+
+/*
+  Follow the user's system color scheme automatically.
+  When the OS/browser indicates a light preference, these variable
+  overrides will be applied so the site uses the light theme.
+  This requires no JavaScript and gives users a consistent experience
+  that follows their system settings.
+*/
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #ffffff;
+    --color-surface: #f6f7f9;
+    --color-text: #0b1220;
+    --color-muted: #6b7280;
+    --color-primary: #007bff;
+    --color-primary-foreground: #ffffff;
+
+    /* Additional light-theme tokens */
+    --color-secondary: #6c757d;
+    --color-accent: #ffd166;
+    --color-link: var(--color-primary);
+    --color-border: #e6e9ef;
+    --color-header-bg: #f2f4f7;
+    --color-footer-bg: #f2f4f7;
+    --color-success: #16a34a;
+    --color-warning: #f59e0b;
+    --color-danger: #dc2626;
+    --color-focus: #80b7ff;
+    --color-surface-foreground: var(--color-text);
+    --color-surface-variant: #ffffff;
+    --color-code-bg: #f3f4f6;
+    --color-overlay: rgba(0, 0, 0, 0.4);
+    --color-primary-600: #0056b3;
+  }
+}
