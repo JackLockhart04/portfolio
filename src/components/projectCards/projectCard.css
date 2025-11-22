@@ -79,3 +79,12 @@
 .projectCardButton:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
+
+.projectCardButton.secondary {
+  /* Secondary button removed — keep styles in case it's reused later */
+  display: none;
+}
+
+.projectCardButton.secondary:hover {
+  background: rgba(255, 255, 255, 0.02);
+}

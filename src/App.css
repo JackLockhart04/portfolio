@@ -1,12 +1,15 @@
-body {
-  background-color: #121212; /* Dark background color */
-  color: #ffffff; /* Light text color for contrast */
-  margin: 0;
-  font-family: Arial, sans-serif;
+:root {
+  --app-max-width: 1200px;
 }
 
 .appContainer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+main {
+  flex: 1 0 auto;
 }

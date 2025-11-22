@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import StocksInSecondsCard from "../../components/projectCards/stocksInSeconds/stocksInSecondsCard";
 import CourseGeniusCard from "../../components/projectCards/courseGenius/courseGeniusCard";
 import Skills from "./components/skills/skills";
+import "../../components/header/header.css"; // reuse button styles for CTAs
 
 // Styles
 import "./home.css";
@@ -24,6 +25,14 @@ const Home: React.FC = () => {
             cyber security. I just completed my CompTIA Security+ certification
             and am working towards CompTIA a+ next.
           </p>
+          <div className="heroCtas" style={{ marginTop: 16 }}>
+            <Link to="/projects" className="btn primary">
+              View Projects
+            </Link>
+            <Link to="/resume" className="btn outline">
+              Resume
+            </Link>
+          </div>
         </div>
         <div id="headshotSection">
           <img
