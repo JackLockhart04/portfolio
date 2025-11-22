@@ -7,7 +7,7 @@ const CourseGenius: React.FC = () => {
       <h1 className="title">CourseGenius.free.nf (In development)</h1>
       <div className="imageSection">
         <img
-          src={`${process.env.PUBLIC_URL}/projects/course-genius/courseGenius.png`}
+          src={`${process.env.PUBLIC_URL}/assets/projects/course-genius/courseGenius.png`}
           alt="Project"
           className="projectImage"
         />

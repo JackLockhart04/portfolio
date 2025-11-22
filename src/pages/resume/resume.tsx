@@ -6,7 +6,7 @@ const Resume: React.FC = () => {
     <div className="resumeContainer">
       <div className="resumeHeader">
         <a
-          href={`${process.env.PUBLIC_URL}/assets/resume/Jack-Lockhart-Resume.pdf`}
+          href={`${process.env.PUBLIC_URL}/assets/resume/Jack_Lockhart_Resume.pdf`}
           download
           className="downloadButton"
         >
@@ -15,7 +15,7 @@ const Resume: React.FC = () => {
       </div>
       <div className="resumeContent">
         <img
-          src={`${process.env.PUBLIC_URL}/assets/resume/Jack-Lockhart-Resume.png`}
+          src={`${process.env.PUBLIC_URL}/assets/resume/Jack_Lockhart_Resume.png`}
           alt="Resume"
           className="resumeImage"
         />

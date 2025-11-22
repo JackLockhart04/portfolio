@@ -28,17 +28,20 @@ A modern, responsive portfolio website built with React and TypeScript showcasin
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/jacklockhart04/portfolio.git
    cd portfolio
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm start
    ```
@@ -64,12 +67,12 @@ src/
 ## Deployment
 
 The portfolio is automatically deployed to GitHub Pages when changes are pushed to the main branch.
- - Run `git add .`
- - Run `git commit -m 'message'`
- - Run `git push origin main`
+
+- Run `git add .`
+- Run `git commit -m 'message'`
+- Run `git push origin main`
 
 ## Contact
 
-- **Email**: [Your email]
-- **LinkedIn**: [Your LinkedIn]
+- **Email**: jrlockhart04@gmail.com
 - **GitHub**: [jacklockhart04](https://github.com/jacklockhart04)

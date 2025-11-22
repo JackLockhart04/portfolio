@@ -1,0 +1,97 @@
+.certificationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #121212; /* Dark background color */
+  color: #ffffff; /* Light text color */
+  min-height: 100vh; /* Ensure the container takes up the full height of the viewport */
+}
+
+.certificationHeader {
+  margin-bottom: 20px;
+}
+
+.certificationContent {
+  width: 100%;
+  max-width: 800px;
+}
+
+.securityPlusSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+
+.certIcon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.certText h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .securityPlusSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .certIcon {
+    width: 64px;
+    height: auto;
+  }
+}
+
+.certCode {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
+    "Courier New", monospace;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.95em;
+  color: #e6edf3;
+}
+
+.certCodeRow {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.certCopyBtn {
+  background: transparent;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.certCopyBtn:hover,
+.certCopyBtn:focus {
+  background: rgba(255, 255, 255, 0.02);
+  outline: none;
+}
+
+.certVerifyLink {
+  color: #9ad1ff;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+.certVerifyLink:hover,
+.certVerifyLink:focus {
+  text-decoration: underline;
+}

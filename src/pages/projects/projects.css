@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+
+  min-height: 90vh; /* Ensure the container takes up the full height of the viewport */
 }
 
 .projectsContainer h1 {

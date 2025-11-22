@@ -20,10 +20,9 @@ const Home: React.FC = () => {
             of Alabama while planning on getting my MBA afterwards. I am
             interested in full stack development and cloud computing, especially
             in python and Java, but also have experience with development in C++
-            and JavaScript. I am currently working on a website to help me keep
-            track of my classes and grades while I am in school. I am using Java
-            and deploying to AWS lambda and configuring by hand to learn AWS
-            better.
+            and JavaScript. I am currently focusing on improving my skills in
+            cyber security. I just completed my CompTIA Security+ certification
+            and am working towards CompTIA a+ next.
           </p>
         </div>
         <div id="headshotSection">

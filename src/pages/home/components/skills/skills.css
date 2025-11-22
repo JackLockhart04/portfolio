@@ -29,6 +29,16 @@
   margin-bottom: 10px;
 }
 
+.homeSkillsGroupLink {
+  color: inherit;
+  text-decoration: none;
+}
+.homeSkillsGroupLink:hover,
+.homeSkillsGroupLink:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
 .homeSkillsGroupIcon {
   width: 30px;
   height: 30px;

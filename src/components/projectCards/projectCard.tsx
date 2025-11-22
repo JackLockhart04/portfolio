@@ -9,7 +9,7 @@ interface ProjectCardProps {
   skills: string;
   description: string;
   projectLink: string;
-  siteLink: string;
+  siteLink?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({

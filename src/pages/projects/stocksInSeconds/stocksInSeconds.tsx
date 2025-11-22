@@ -7,7 +7,7 @@ const StocksInSeconds: React.FC = () => {
       <h1 className="title">StocksInSeconds.com (Taken offline)</h1>
       <div className="imageSection">
         <img
-          src={`${process.env.PUBLIC_URL}/projects/stocks-in-seconds/stocksInSeconds.png`}
+          src={`${process.env.PUBLIC_URL}/assets/projects/stocks-in-seconds/stocksInSeconds.png`}
           alt="Project"
           className="projectImage"
         />
