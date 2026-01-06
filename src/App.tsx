@@ -14,7 +14,6 @@ import Resume from "./pages/resume/resume";
 import Certifications from "./pages/certifications/certifications";
 import Projects from "./pages/projects/projects";
 import StocksInSeconds from "./pages/projects/stocksInSeconds/stocksInSeconds";
-import CourseGenius from "./pages/projects/courseGenius/courseGenius";
 
 // Styles
 import "./App.css";
@@ -35,7 +34,6 @@ const App: React.FC = () => {
             path="/projects/stocksinseconds"
             element={<StocksInSeconds />}
           />
-          <Route path="/projects/coursegenius" element={<CourseGenius />} />
         </Routes>
         <ContactFooter />
       </div>

@@ -3,7 +3,6 @@ import React from "react";
 import "./projects.css";
 
 import StocksInSecondsCard from "../../components/projectCards/stocksInSeconds/stocksInSecondsCard";
-import CourseGeniusCard from "../../components/projectCards/courseGenius/courseGeniusCard";
 
 const Projects: React.FC = () => {
   return (
@@ -21,7 +20,6 @@ const Projects: React.FC = () => {
       </div>
       <div className="projectsGrid">
         <StocksInSecondsCard />
-        <CourseGeniusCard />
       </div>
     </div>
   );
