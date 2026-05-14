@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 // Components
 import StocksInSecondsCard from "../../components/projectCards/stocksInSeconds/stocksInSecondsCard";
+import BuildingEnergyPredictor from "../../components/projectCards/buildingEnergyPredictor/buildingEnergyPredictor";
 import Skills from "./components/skills/skills";
 
 // Styles
@@ -49,6 +50,7 @@ const Home: React.FC = () => {
         </div>
         <div className="homeProjectGrid">
           <StocksInSecondsCard />
+		  <BuildingEnergyPredictor />
         </div>
       </div>
       <Skills />

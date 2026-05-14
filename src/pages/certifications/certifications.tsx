@@ -32,6 +32,7 @@ const Certifications: React.FC = () => {
           <div className="certText">
             <h2>CompTIA Security+ | SY0-701</h2>
             <div className="certCodeRow">
+				<p>Verification code: </p>
               <code className="certCode">{certCode}</code>
               <button
                 className="certCopyBtn"
@@ -47,7 +48,7 @@ const Certifications: React.FC = () => {
                 rel="noopener noreferrer"
                 aria-label="Open CompTIA verification page in a new tab"
               >
-                Verify
+                Verify here
               </a>
             </div>
           </div>

@@ -12,7 +12,7 @@ const StocksInSeconds: React.FC = () => {
           className="projectImage"
         />
       </div>
-      <div className="linkSection">
+      {/* <div className="linkSection">
         <a
           href="https://www.StocksInSeconds.com/"
           className="projectLink"
@@ -21,7 +21,7 @@ const StocksInSeconds: React.FC = () => {
         >
           Visit stocksinseconds.com
         </a>
-      </div>
+      </div> */}
       <div className="descriptionContainer">
         <p>
           StocksInSeconds.com is a website for a startup company. I developed
@@ -32,23 +32,20 @@ const StocksInSeconds: React.FC = () => {
         </p>
         <p>
           I created the backend in python Flask then realized I needed to host
-          it somewhere. I did research and decided that AWS was the best fit due
-          to its generous free tier of Lambda, API Gateway, and DynamoDB. I
-          spent a lot of time learning how AWS works and how to deploy my code
-          easily and efficiently. I then created the authentication system using
-          Microsoft msal. This created multiple issues that I had to learn about
-          such as how cookies work and and safaris strict cookie policy. The
-          backend being hosted on a different domain than the frontend messed up
-          the cookies so I had to figure out how to use AWS to use a sub domain
-          of the website. I finally had to setup payment using stripe to make it
-          easy and secure.
+          it somewhere. I did research and decided that AWS was the best fit for my scenaria.
+		  The code development was somewhat simple but the other parts such as SSL/TLS certificates 
+		  were more challenging because I did not know how to do most of it. I had to learn about how 
+		  authentication works, cookies, HTTPS and SSL/TLS certificates, DNS management, cloud computing, and 
+		  basic security concepts. Each of these topics helped me learn a lot about web development and 
+		  how to make a secure website.
         </p>
         <p>
-          Overall I learned a lot about many aspects of web development. I had a
-          lot of practice with each of the technologies due to my learning
-          mistakes along with shifts in the requirements. I feel as though I am
-          fairly proficient in python and javascript now but still have plenty
-          of learning to do with AWS and depoloyment in general.
+          Overall I learned a lot about many aspects of web development. Obviously, I learned some about
+		  site development and deployment, but more importantly I learned about lots of security concepts.
+		  This project got me interested in penetration testing and ethical hacking
+		  after all the research I had to do about web security. I am proud of how this project turned out, 
+		  but sadly it was taken offline by the owners due to a lack of time to develop the other parts
+		  of the business.
         </p>
       </div>
     </div>

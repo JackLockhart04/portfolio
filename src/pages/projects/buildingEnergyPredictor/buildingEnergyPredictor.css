@@ -1,4 +1,4 @@
-.courseGeniusContainer {
+.buildingEnergyPredictorContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,33 +26,19 @@
   object-fit: contain; /* Maintain original dimensions */
 }
 
-.linkSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
 .projectLink {
   display: inline-block;
   padding: 15px 30px;
   font-size: 1.25rem;
   background-color: var(--color-surface-variant);
-  color: var(--color-primary);
+  color: var(--color-link);
   text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  border: 2px solid var(--color-primary);
-  min-width: 200px;
-  text-align: center;
-  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .projectLink:hover {
-  background-color: var(--color-primary);
-  color: var(--color-primary-foreground);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(44, 132, 255, 0.3);
+  background-color: var(--color-surface);
 }
 
 .descriptionContainer {

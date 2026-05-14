@@ -10,8 +10,8 @@ const StocksInSecondsCard: React.FC = () => {
       projectLink="/projects/stocksinseconds"
       image={`${process.env.PUBLIC_URL}/assets/projects/stocks-in-seconds/stocksInSeconds.png`}
       skills={"Python, Flask, Javascript, AWS services, APIs"}
-      description="Full stack website for a startup business"
-      siteLink="https://stocksinseconds.com/"
+      description="Full stack website for a startup business. I had to learn how to deploy a backend on AWS and manage all the security features such as authentication, cookies management, and Stripe integration."
+    //   siteLink="https://stocksinseconds.com/"
     />
   );
 };

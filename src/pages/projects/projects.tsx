@@ -3,6 +3,7 @@ import React from "react";
 import "./projects.css";
 
 import StocksInSecondsCard from "../../components/projectCards/stocksInSeconds/stocksInSecondsCard";
+import BuildingEnergyPredictorCard from "../../components/projectCards/buildingEnergyPredictor/buildingEnergyPredictor";
 
 const Projects: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Projects: React.FC = () => {
       </div>
       <div className="projectsGrid">
         <StocksInSecondsCard />
+		<BuildingEnergyPredictorCard />
       </div>
     </div>
   );

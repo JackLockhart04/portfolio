@@ -29,24 +29,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="projectCardSkillsText">{skills}</p>
       </div>
       <div className="projectCardDescriptionSection">
-        {siteLink ? (
-          <a
-            href={siteLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="projectCardNameLink"
-          >
-            <h2 className="projectCardName">{name}</h2>
-          </a>
-        ) : (
-          <h2 className="projectCardName">{name}</h2>
-        )}
+        <h2 className="projectCardName">{name}</h2>
         <p className="projectCardDescription">{description}</p>
       </div>
       <div className="projectCardLinkSection">
         <Link to={projectLink} className="projectCardButton">
-          View Project
+          View Project Page
         </Link>
+		{siteLink ? (
+          <p className="projectCardSiteLinkText">
+            <span>Visit site here:</span>
+            <a
+              href={siteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="projectCardSiteLink"
+            >
+              {siteLink}
+            </a>
+          </p>
+        ) : null}
       </div>
     </div>
   );

@@ -77,6 +77,7 @@ const Skills: React.FC = () => {
             <span>Oracle Cloud</span>
             <span>Docker</span>
             <span>SQL</span>
+			<span>AI Models</span>
           </div>
         </div>
       </div>
