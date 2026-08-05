@@ -63,11 +63,7 @@ src/
 
 ## Deployment
 
-The portfolio is automatically deployed to GitHub Pages when changes are pushed to the main branch.
-
-- Run `git add .`
-- Run `git commit -m 'message'`
-- Run `git push origin main`
+Run `npm run deploy`
 
 ## Contact
 

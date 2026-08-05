@@ -15,6 +15,7 @@ import Certifications from "./pages/certifications/certifications";
 import Projects from "./pages/projects/projects";
 import StocksInSeconds from "./pages/projects/stocksInSeconds/stocksInSeconds";
 import BuildingEnergyPredictor from "./pages/projects/buildingEnergyPredictor/buildingEnergyPredictor";
+import PasswordManager from "./pages/projects/passwordManager/passwordManager";
 
 // Styles
 import "./App.css";
@@ -38,6 +39,10 @@ const App: React.FC = () => {
           <Route
             path="/projects/buildingenergypredictor"
             element={<BuildingEnergyPredictor />}
+          />
+          <Route
+            path="/projects/password-manager"
+            element={<PasswordManager />}
           />
         </Routes>
         <ContactFooter />

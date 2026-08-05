@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // Components
 import StocksInSecondsCard from "../../components/projectCards/stocksInSeconds/stocksInSecondsCard";
 import BuildingEnergyPredictor from "../../components/projectCards/buildingEnergyPredictor/buildingEnergyPredictor";
+import PasswordManagerCard from "../../components/projectCards/passwordManager/passwordManager";
 import Skills from "./components/skills/skills";
 
 // Styles
@@ -17,12 +18,11 @@ const Home: React.FC = () => {
           <h1>Jack Lockhart</h1>
           <p className="aboutMeParagraph">
             I am studying computer science and cyber security at the University
-            of Alabama while planning on getting my MBA afterwards. I am
-            interested in full stack development and cloud computing, especially
-            in python and Java, but also have experience with development in C++
-            and JavaScript. I am currently focusing on improving my skills in
-            cyber security. I just completed my CompTIA Security+ certification
-            and am working towards CompTIA a+ next.
+            of Alabama and plan on getting my MBA afterwards. I am
+            interested in cloud computing, cyber security, and AI systems. 
+            I have experience with a variety of programming languages and security technologies.
+            I just completed my Network+ and Security+ certifications and working towards my 
+            CCNA certification.
           </p>
           <div className="heroCtas" style={{ marginTop: 16 }}>
             <Link to="/projects" className="btn primary">
@@ -51,6 +51,7 @@ const Home: React.FC = () => {
         <div className="homeProjectGrid">
           <StocksInSecondsCard />
 		  <BuildingEnergyPredictor />
+		  <PasswordManagerCard />
         </div>
       </div>
       <Skills />

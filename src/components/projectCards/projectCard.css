@@ -13,14 +13,19 @@
 
 .projectCardImageSection {
   width: 100%;
-  height: auto;
+  height: 140px; /* fixed height to keep cards consistent */
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .projectCardImage {
-  width: 100%;
-  object-fit: contain; /* Maintain original dimensions */
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Maintain original aspect ratio while fitting */
+  display: block;
 }
 
 .projectCardSkillsSection {

@@ -25,22 +25,7 @@ const Skills: React.FC = () => {
           </div>
           <div className="homeSkillsList">
             <span>CompTIA Security+ (SY0-701)</span>
-          </div>
-        </div>
-        {/* Frontend Skills */}
-        <div className="homeSkillsGroup">
-          <div className="homeSkillsGroupHeader">
-            <img
-              src={`${process.env.PUBLIC_URL}/logos/frontend-icon.png`}
-              alt="Frontend"
-              className="homeSkillsGroupIcon"
-            />
-            <h3>Frontend</h3>
-          </div>
-          <div className="homeSkillsList">
-            <span>JavaScript</span>
-            <span>TypeScript</span>
-            <span>React</span>
+            <span>CompTIA Network+ (N10-009)</span>
           </div>
         </div>
         {/* Backend Skills */}
@@ -51,13 +36,16 @@ const Skills: React.FC = () => {
               alt="Backend"
               className="homeSkillsGroupIcon"
             />
-            <h3>Backend</h3>
+            <h3>Development</h3>
           </div>
           <div className="homeSkillsList">
             <span>Python</span>
             <span>Java</span>
             <span>C++</span>
             <span>Rust</span>
+            <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span>React</span>
           </div>
         </div>
         {/* Other Technologies */}
@@ -71,13 +59,16 @@ const Skills: React.FC = () => {
             <h3>Other Technologies</h3>
           </div>
           <div className="homeSkillsList">
+            <span>Linux</span>
+            <span>Cryptography</span>
+            <span>Networks</span>
             <span>Git</span>
-            <span>AWS (Lambda, CloudFront)</span>
-            <span>Microsoft Azure</span>
-            <span>Oracle Cloud</span>
             <span>Docker</span>
             <span>SQL</span>
-			<span>AI Models</span>
+			      <span>AI Models</span>
+            <span>AWS (Lambda, CloudFront, IAM)</span>
+            <span>Microsoft Azure</span>
+            <span>Oracle Cloud</span>
           </div>
         </div>
       </div>
