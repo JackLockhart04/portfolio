@@ -15,18 +15,18 @@ const Navbar: React.FC = () => {
         </div>
         {/* Contact Link */}
         <div className="navLinkBox">
-          <Link to="/contact" className="navLink">
+          <a href="/contact" className="navLink">
             Contact
-          </Link>
+          </a>
         </div>
       </div>
       {/* Right half of navbar */}
       <div className="navRight">
         {/* Resume Link */}
         <div className="navLinkBox">
-          <Link to="/resume" className="navLink">
+          <a href="/resume" className="navLink">
             Resume
-          </Link>
+          </a>
         </div>
         {/* Certifications Link */}
         <div className="navLinkBox">

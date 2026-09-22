@@ -28,9 +28,9 @@ const Home: React.FC = () => {
             <Link to="/projects" className="btn primary">
               View Projects
             </Link>
-            <Link to="/resume" className="btn outline">
+            <a href="/resume" className="btn outline">
               Resume
-            </Link>
+            </a>
           </div>
         </div>
         <div id="headshotSection">

@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../../src/pages/resume/resume.css";
+---
+
+<BaseLayout title="Résumé | Jack Lockhart">
+  <div class="resumeContainer">
+    <div class="resumeHeader">
+      <a
+        href="/assets/resume/Jack_Lockhart_Resume.pdf"
+        download
+        class="downloadButton"
+      >
+        Download Resume
+      </a>
+    </div>
+    <div class="resumeContent">
+      <img
+        src="/assets/resume/Jack_Lockhart_Resume.png"
+        alt="Resume"
+        class="resumeImage"
+      />
+    </div>
+  </div>
+</BaseLayout>
