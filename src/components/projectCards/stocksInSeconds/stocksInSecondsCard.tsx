@@ -8,6 +8,7 @@ const StocksInSecondsCard: React.FC = () => {
     <ProjectCard
       name="StocksInSeconds.com"
       projectLink="/projects/stocksinseconds"
+      nativeProjectLink
       image={`${process.env.PUBLIC_URL}/assets/projects/stocks-in-seconds/stocksInSeconds.png`}
       skills={"Python, Flask, Javascript, AWS services, APIs"}
       description="Full stack website for a startup business. I had to learn how to deploy a backend on AWS and manage all the security features such as authentication, cookies management, and Stripe integration."

@@ -1,6 +1,6 @@
 # Jack Lockhart Portfolio
 
-This portfolio is in an incremental migration from Create React App to Astro. Astro is the build system and page shell, while the existing client-side application continues to run through Astro's React integration. `/contact`, `/resume`, `/certifications`, `/projects`, and the Password Manager detail page at `/projects/password-manager` are native Astro routes. The homepage remains React, while Stocks in Seconds and Building Energy Predictor continue to use React Router hash URLs during this stage of the migration.
+This portfolio is in an incremental migration from Create React App to Astro. Astro is the build system and page shell, while the existing client-side application continues to run through Astro's React integration. `/contact`, `/resume`, `/certifications`, the Projects listing at `/projects`, and all three displayed project-detail pages are native Astro routes. The homepage still runs through React, and the old React Router hash routes temporarily remain as fallbacks.
 
 ## Setup and commands
 

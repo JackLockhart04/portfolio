@@ -8,6 +8,7 @@ const BuildingEnergyPredictor: React.FC = () => {
     <ProjectCard
       name="Building Energy Predictor"
       projectLink="/projects/buildingenergypredictor"
+      nativeProjectLink
       image={`${process.env.PUBLIC_URL}/assets/projects/building-energy-predictor/buildingEnergyPredictor.png`}
       skills={"Python, Jupyter Notebook, Machine Learning, APIs"}
       description="A machine learning model that predicts the energy usage of a building based on various features such as weather data and building characteristics."
