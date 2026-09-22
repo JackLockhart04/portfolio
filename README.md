@@ -1,71 +1,13 @@
-# Jack Lockhart - Portfolio
+# Jack Lockhart Portfolio
 
-A modern, responsive portfolio website built with React and TypeScript showcasing my projects, skills, and professional experience.
+This portfolio is in an incremental migration from Create React App to Astro. Astro is the build system and page shell, while the existing client-side application continues to run through Astro's React integration. Routing still uses React Router with hash URLs during this stage of the migration.
 
-## Features
+## Setup and commands
 
-- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Modern UI**: Clean, professional interface with smooth animations
-- **Project Showcase**: Detailed project pages with technologies used
-- **Contact Information**: Easy ways to get in touch
-- **Resume Integration**: Professional resume display
+- `npm install` - Install dependencies.
+- `npm run dev` - Start the Astro development server.
+- `npm run build` - Create the production build in `dist/`.
+- `npm run preview` - Preview the production build locally.
+- `npm run typecheck` - Run TypeScript without emitting files.
 
-## Technologies Used
-
-- React 18
-- TypeScript
-- React Router DOM
-- CSS3 with custom styling
-- GitHub Pages for deployment
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-
-   git clone https://github.com/jacklockhart04/portfolio.git
-   cd portfolio
-
-
-2. Install dependencies:
-
-   npm install
-
-
-3. Start the development server:
-
-   npm start
-
-
-4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-## Available Scripts
-
-- `npm start` - Runs the app in development mode
-- `npm run build` - Builds the app for production
-- `npm run deploy` - Builds and deploys to GitHub Pages
-
-## Project Structure
-
-```
-src/
-├── components/          # Reusable UI components
-├── pages/              # Page components
-├── App.tsx             # Main application component
-└── index.tsx           # Application entry point
-```
-
-## Deployment
-
-Run `npm run deploy`
-
-## Contact
-
-- **Email**: jrlockhart04@gmail.com
-- **GitHub**: [jacklockhart04](https://github.com/jacklockhart04)
+Astro source pages are under `astro/`, and the existing React application remains under `src/`. Deployment configuration is intentionally not included yet.
