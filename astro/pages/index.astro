@@ -1,21 +1,90 @@
 ---
-import App from "../../src/App";
-import "../../src/index.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Skills from "../components/Skills.astro";
+import "../../src/pages/home/home.css";
+
+const projects = [
+  {
+    name: "StocksInSeconds.com",
+    image: "/assets/projects/stocks-in-seconds/stocksInSeconds.png",
+    skills: "Python, Flask, Javascript, AWS services, APIs",
+    description:
+      "Full stack website for a startup business. I had to learn how to deploy a backend on AWS and manage all the security features such as authentication, cookies management, and Stripe integration.",
+    projectLink: "/projects/stocksinseconds",
+  },
+  {
+    name: "Building Energy Predictor",
+    image:
+      "/assets/projects/building-energy-predictor/buildingEnergyPredictor.png",
+    skills: "Python, Jupyter Notebook, Machine Learning, APIs",
+    description:
+      "A machine learning model that predicts the energy usage of a building based on various features such as weather data and building characteristics.",
+    projectLink: "/projects/buildingenergypredictor",
+    siteLink: "https://jacklockhart04.github.io/building_energy_predictor/",
+  },
+  {
+    name: "Password Manager",
+    image: "/assets/projects/password-manager/password_gen.png",
+    skills: "Cryptography, Password Security, JavaScript",
+    description:
+      "Browser-based generator and local vault emphasizing cryptographic correctness: Web Crypto RNG, rejection-sampled generation, PBKDF2 key derivation and AES-GCM storage. Includes strength meters and explicit, auditable generation controls.",
+    projectLink: "/projects/password-manager",
+  },
+];
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="portfolio" content="Jack Lockhart Portfolio" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>Jack Lockhart</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <App client:only="react" />
-  </body>
-</html>
+<BaseLayout>
+  <div class="homeContainer">
+    <div id="aboutMeContainer" class="splitSection">
+      <div id="aboutMe" class="aboutMeText">
+        <h1>Jack Lockhart</h1>
+        <p class="aboutMeParagraph">
+          I am studying computer science and cyber security at the University
+          of Alabama and plan on getting my MBA afterwards. I am interested in
+          cloud computing, cyber security, and AI systems. I have experience
+          with a variety of programming languages and security technologies. I
+          just completed my Network+ and Security+ certifications and working
+          towards my CCNA certification.
+        </p>
+        <div class="heroCtas" style="margin-top: 16px">
+          <a href="/projects" class="btn primary">View Projects</a>
+          <a href="/resume" class="btn outline">Résumé</a>
+        </div>
+      </div>
+      <div id="headshotSection">
+        <img src="/assets/profile/myPic.jpg" alt="Me" class="myPic" />
+      </div>
+    </div>
+    <div class="homeProjectsSection">
+      <div class="homeProjectsHeader">
+        <h2>Projects</h2>
+        <a href="/projects" class="seeAllProjectsLink">See all projects</a>
+      </div>
+      <div class="homeProjectGrid">
+        {projects.map((project) => <ProjectCard {...project} />)}
+      </div>
+    </div>
+    <Skills />
+  </div>
+
+  <script is:inline>
+    const legacyRedirects = {
+      "#/contact": "/contact",
+      "#/resume": "/resume",
+      "#/certifications": "/certifications",
+      "#/projects": "/projects",
+      "#/projects/password-manager": "/projects/password-manager",
+      "#/projects/buildingenergypredictor":
+        "/projects/buildingenergypredictor",
+      "#/projects/stocksinseconds": "/projects/stocksinseconds",
+    };
+
+    const legacyDestination = legacyRedirects[window.location.hash];
+    if (legacyDestination) {
+      window.location.replace(legacyDestination);
+    } else if (window.location.hash === "#/") {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+  </script>
+</BaseLayout>

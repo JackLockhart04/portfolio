@@ -1,6 +1,6 @@
 # Jack Lockhart Portfolio
 
-This portfolio is in an incremental migration from Create React App to Astro. Astro is the build system and page shell, while the existing client-side application continues to run through Astro's React integration. `/contact`, `/resume`, `/certifications`, the Projects listing at `/projects`, and all three displayed project-detail pages are native Astro routes. The homepage still runs through React, and the old React Router hash routes temporarily remain as fallbacks.
+Every active page in this portfolio is now rendered by Astro. The old React source remains temporarily in `src/` for a later cleanup pass, and lightweight compatibility redirects preserve the supported legacy hash URLs.
 
 ## Setup and commands
 
@@ -10,4 +10,4 @@ This portfolio is in an incremental migration from Create React App to Astro. As
 - `npm run preview` - Preview the production build locally.
 - `npm run typecheck` - Run TypeScript without emitting files.
 
-Astro source pages are under `astro/`, and the existing React application remains under `src/`. Deployment configuration is intentionally not included yet.
+Astro source pages are under `astro/`, and the existing React application remains under `src/`. Deployment configuration remains intentionally deferred.
