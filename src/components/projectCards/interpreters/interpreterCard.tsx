@@ -8,7 +8,7 @@ const InterpreterCard: React.FC = () => {
     <ProjectCard
       name="Lisp Interpreter"
       projectLink="/projects/lisp-interpreter"
-      image={`${process.env.PUBLIC_URL}/assets/projects/lisp-interpreter/lispInterpreter.png`}
+      image={`${process.env.PUBLIC_URL}/assets/projects/interpreter/lisp-interpreter.png`}
       skills={"C++, Lisp"}
       description="Lisp interpreter implemented in C++."
     />
