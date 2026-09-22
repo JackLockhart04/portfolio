@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./skills.css";
 
 const Skills: React.FC = () => {
@@ -18,9 +17,9 @@ const Skills: React.FC = () => {
               className="homeSkillsGroupIcon"
             />
             <h3>
-              <Link to="/certifications" className="homeSkillsGroupLink">
+              <a href="/certifications" className="homeSkillsGroupLink">
                 Certifications
-              </Link>
+              </a>
             </h3>
           </div>
           <div className="homeSkillsList">

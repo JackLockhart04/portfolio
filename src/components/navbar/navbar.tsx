@@ -30,9 +30,9 @@ const Navbar: React.FC = () => {
         </div>
         {/* Certifications Link */}
         <div className="navLinkBox">
-          <Link to="/certifications" className="navLink">
+          <a href="/certifications" className="navLink">
             Certifications
-          </Link>
+          </a>
         </div>
         {/* Projects Link */}
         <div className="navLinkBox">

@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../../src/pages/certifications/certifications.css";
+
+const certifications = [
+  {
+    name: "CompTIA Network+",
+    code: "f3e2c34ab8244a2a93aa0dd151dc9a58",
+    img: "/assets/certifications/network_plus_logo.png",
+    verifyLink: "http://verify.CompTIA.org",
+    alt: "CompTIA Network+ logo",
+  },
+  {
+    name: "CompTIA Security+",
+    code: "e864a7cf0a0e445e8c2aab65ed6cf500",
+    img: "/assets/certifications/security_plus_logo.png",
+    verifyLink: "http://verify.CompTIA.org",
+    alt: "CompTIA Security+ logo",
+  },
+];
+---
+
+<BaseLayout title="Certifications | Jack Lockhart">
+  <div class="certificationContainer">
+    <div class="certificationHeader">
+      <h1>Certifications</h1>
+    </div>
+    <div class="certificationContent">
+      {
+        certifications.map((cert) => (
+          <div class="securityPlusSection">
+            <img src={cert.img} alt={cert.alt} class="certIcon" />
+            <div class="certText">
+              <h2>{cert.name}</h2>
+              <div class="certCodeRow">
+                <p>Verification code: </p>
+                <code class="certCode">{cert.code}</code>
+                <button
+                  class="certCopyBtn"
+                  aria-label={`Copy certification code for ${cert.name}`}
+                  data-cert-code={cert.code}
+                >
+                  Copy
+                </button>
+                <a
+                  class="certVerifyLink"
+                  href={cert.verifyLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open verification page for ${cert.name} in a new tab`}
+                >
+                  Verify here
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>(".certCopyBtn").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const code = button.dataset.certCode;
+
+      if (!code) return;
+
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(code);
+        }
+        button.textContent = "Copied";
+        window.setTimeout(() => {
+          button.textContent = "Copy";
+        }, 2000);
+      } catch (error) {
+        console.error("Copy failed", error);
+      }
+    });
+  });
+</script>
