@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import "../../src/pages/projects/projects.css";
+
+const projects = [
+  {
+    name: "StocksInSeconds.com",
+    image: "/assets/projects/stocks-in-seconds/stocksInSeconds.png",
+    skills: "Python, Flask, Javascript, AWS services, APIs",
+    description:
+      "Full stack website for a startup business. I had to learn how to deploy a backend on AWS and manage all the security features such as authentication, cookies management, and Stripe integration.",
+    projectLink: "/#/projects/stocksinseconds",
+  },
+  {
+    name: "Building Energy Predictor",
+    image:
+      "/assets/projects/building-energy-predictor/buildingEnergyPredictor.png",
+    skills: "Python, Jupyter Notebook, Machine Learning, APIs",
+    description:
+      "A machine learning model that predicts the energy usage of a building based on various features such as weather data and building characteristics.",
+    projectLink: "/#/projects/buildingenergypredictor",
+    siteLink: "https://jacklockhart04.github.io/building_energy_predictor/",
+  },
+  {
+    name: "Password Manager",
+    image: "/assets/projects/password-manager/password_gen.png",
+    skills: "Cryptography, Password Security, JavaScript",
+    description:
+      "Browser-based generator and local vault emphasizing cryptographic correctness: Web Crypto RNG, rejection-sampled generation, PBKDF2 key derivation and AES-GCM storage. Includes strength meters and explicit, auditable generation controls.",
+    projectLink: "/#/projects/password-manager",
+  },
+];
+---
+
+<BaseLayout title="Projects | Jack Lockhart">
+  <div class="projectsContainer">
+    <h1>Projects</h1>
+    <div class="githubLinkContainer">
+      <a
+        href="https://github.com/JackLockhart04"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="githubLink"
+      >
+        View My GitHub
+      </a>
+    </div>
+    <div class="projectsGrid">
+      {projects.map((project) => <ProjectCard {...project} />)}
+    </div>
+  </div>
+</BaseLayout>

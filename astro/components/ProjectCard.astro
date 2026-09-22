@@ -1,0 +1,45 @@
+---
+import "../../src/components/projectCards/projectCard.css";
+
+interface Props {
+  name: string;
+  image: string;
+  skills: string;
+  description: string;
+  projectLink: string;
+  siteLink?: string;
+}
+
+const { name, image, skills, description, projectLink, siteLink } = Astro.props;
+---
+
+<div class="projectCard">
+  <div class="projectCardImageSection">
+    <img src={image} alt="Project" class="projectCardImage" />
+  </div>
+  <div class="projectCardSkillsSection">
+    <p class="projectCardSkillsText">{skills}</p>
+  </div>
+  <div class="projectCardDescriptionSection">
+    <h2 class="projectCardName">{name}</h2>
+    <p class="projectCardDescription">{description}</p>
+  </div>
+  <div class="projectCardLinkSection">
+    <a href={projectLink} class="projectCardButton">View Project Page</a>
+    {
+      siteLink && (
+        <p class="projectCardSiteLinkText">
+          <span>Visit site here:</span>
+          <a
+            href={siteLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="projectCardSiteLink"
+          >
+            {siteLink}
+          </a>
+        </p>
+      )
+    }
+  </div>
+</div>

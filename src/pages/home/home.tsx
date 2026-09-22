@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 // Components
 import StocksInSecondsCard from "../../components/projectCards/stocksInSeconds/stocksInSecondsCard";
@@ -25,9 +24,9 @@ const Home: React.FC = () => {
             CCNA certification.
           </p>
           <div className="heroCtas" style={{ marginTop: 16 }}>
-            <Link to="/projects" className="btn primary">
+            <a href="/projects" className="btn primary">
               View Projects
-            </Link>
+            </a>
             <a href="/resume" className="btn outline">
               Resume
             </a>
@@ -44,9 +43,9 @@ const Home: React.FC = () => {
       <div className="homeProjectsSection">
         <div className="homeProjectsHeader">
           <h2>Projects</h2>
-          <Link to="/projects" className="seeAllProjectsLink">
+          <a href="/projects" className="seeAllProjectsLink">
             See all projects
-          </Link>
+          </a>
         </div>
         <div className="homeProjectGrid">
           <StocksInSecondsCard />
