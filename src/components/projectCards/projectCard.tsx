@@ -10,6 +10,7 @@ interface ProjectCardProps {
   description: string;
   projectLink: string;
   siteLink?: string;
+  nativeProjectLink?: boolean;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,6 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   projectLink,
   siteLink,
+  nativeProjectLink = false,
 }) => {
   return (
     <div className="projectCard">
@@ -33,9 +35,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="projectCardDescription">{description}</p>
       </div>
       <div className="projectCardLinkSection">
-        <Link to={projectLink} className="projectCardButton">
-          View Project Page
-        </Link>
+		{nativeProjectLink ? (
+          <a href={projectLink} className="projectCardButton">
+            View Project Page
+          </a>
+        ) : (
+          <Link to={projectLink} className="projectCardButton">
+            View Project Page
+          </Link>
+        )}
 		{siteLink ? (
           <p className="projectCardSiteLinkText">
             <span>Visit site here:</span>

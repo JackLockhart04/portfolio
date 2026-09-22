@@ -8,6 +8,7 @@ const PasswordManagerCard: React.FC = () => {
     <ProjectCard
       name="Password Manager"
       projectLink="/projects/password-manager"
+      nativeProjectLink
       image={`${process.env.PUBLIC_URL}/assets/projects/password-manager/password_gen.png`}
       skills={"Cryptography, Password Security, JavaScript"}
       description={
