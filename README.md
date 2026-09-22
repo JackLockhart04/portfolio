@@ -1,6 +1,6 @@
 # Jack Lockhart Portfolio
 
-This portfolio is in an incremental migration from Create React App to Astro. Astro is the build system and page shell, while the existing client-side application continues to run through Astro's React integration. Routing still uses React Router with hash URLs during this stage of the migration.
+This portfolio is in an incremental migration from Create React App to Astro. Astro is the build system and page shell, while the existing client-side application continues to run through Astro's React integration. `/contact` is the first native Astro route; the remaining pages continue to use React Router with hash URLs during this stage of the migration.
 
 ## Setup and commands
 
