@@ -2,14 +2,6 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jacklockhart04.github.io/portfolio",
-  "dependencies": {
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0"
-  },
   "scripts": {
     "start": "astro dev",
     "dev": "astro dev",
@@ -17,25 +9,7 @@
     "preview": "astro preview",
     "typecheck": "tsc --noEmit"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "@astrojs/react": "^6.0.6",
     "@types/node": "^26.6.2",
     "astro": "^7.3.3",
     "typescript": "^7.0.2"
