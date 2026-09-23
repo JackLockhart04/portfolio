@@ -1,6 +1,6 @@
 # Jack Lockhart Portfolio
 
-This is a native Astro portfolio. Every active page is rendered by Astro, and React and React Router have been removed. A lightweight redirect script preserves supported legacy hash URLs.
+This is a native Astro portfolio. Every active page is rendered by Astro.
 
 ## Setup and commands
 
@@ -10,4 +10,4 @@ This is a native Astro portfolio. Every active page is rendered by Astro, and Re
 - `npm run preview` - Preview the production build locally.
 - `npm run typecheck` - Run TypeScript without emitting files.
 
-Astro source pages are under `astro/`, with shared styles retained under `src/`. Deployment configuration has not been added yet.
+Astro source, styles, components, layouts, and pages live under `astro/`. Static images and documents live under `public/`. Deployment configuration has not been added yet.

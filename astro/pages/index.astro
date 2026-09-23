@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import Skills from "../components/Skills.astro";
-import "../../src/pages/home/home.css";
+import "../styles/pages/home.css";
 
 const projects = [
   {
@@ -68,23 +68,4 @@ const projects = [
     <Skills />
   </div>
 
-  <script is:inline>
-    const legacyRedirects = {
-      "#/contact": "/contact",
-      "#/resume": "/resume",
-      "#/certifications": "/certifications",
-      "#/projects": "/projects",
-      "#/projects/password-manager": "/projects/password-manager",
-      "#/projects/buildingenergypredictor":
-        "/projects/buildingenergypredictor",
-      "#/projects/stocksinseconds": "/projects/stocksinseconds",
-    };
-
-    const legacyDestination = legacyRedirects[window.location.hash];
-    if (legacyDestination) {
-      window.location.replace(legacyDestination);
-    } else if (window.location.hash === "#/") {
-      window.history.replaceState(null, "", window.location.pathname + window.location.search);
-    }
-  </script>
 </BaseLayout>
