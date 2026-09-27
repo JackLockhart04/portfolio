@@ -3,33 +3,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import Skills from "../components/Skills.astro";
 import "../styles/pages/home.css";
+import { withBase } from "../utils/withBase";
 
 const projects = [
   {
     name: "StocksInSeconds.com",
-    image: "/assets/projects/stocks-in-seconds/stocksInSeconds.png",
+    image: withBase("/assets/projects/stocks-in-seconds/stocksInSeconds.png"),
     skills: "Python, Flask, Javascript, AWS services, APIs",
     description:
       "Full stack website for a startup business. I had to learn how to deploy a backend on AWS and manage all the security features such as authentication, cookies management, and Stripe integration.",
-    projectLink: "/projects/stocksinseconds",
+    projectLink: withBase("/projects/stocksinseconds"),
   },
   {
     name: "Building Energy Predictor",
-    image:
+    image: withBase(
       "/assets/projects/building-energy-predictor/buildingEnergyPredictor.png",
+    ),
     skills: "Python, Jupyter Notebook, Machine Learning, APIs",
     description:
       "A machine learning model that predicts the energy usage of a building based on various features such as weather data and building characteristics.",
-    projectLink: "/projects/buildingenergypredictor",
+    projectLink: withBase("/projects/buildingenergypredictor"),
     siteLink: "https://jacklockhart04.github.io/building_energy_predictor/",
   },
   {
     name: "Password Manager",
-    image: "/assets/projects/password-manager/password_gen.png",
+    image: withBase("/assets/projects/password-manager/password_gen.png"),
     skills: "Cryptography, Password Security, JavaScript",
     description:
       "Browser-based generator and local vault emphasizing cryptographic correctness: Web Crypto RNG, rejection-sampled generation, PBKDF2 key derivation and AES-GCM storage. Includes strength meters and explicit, auditable generation controls.",
-    projectLink: "/projects/password-manager",
+    projectLink: withBase("/projects/password-manager"),
   },
 ];
 ---
@@ -48,18 +50,24 @@ const projects = [
           towards my CCNA certification.
         </p>
         <div class="heroCtas" style="margin-top: 16px">
-          <a href="/projects" class="btn primary">View Projects</a>
-          <a href="/resume" class="btn outline">Résumé</a>
+          <a href={withBase("/projects")} class="btn primary">View Projects</a>
+          <a href={withBase("/resume")} class="btn outline">Résumé</a>
         </div>
       </div>
       <div id="headshotSection">
-        <img src="/assets/profile/myPic.jpg" alt="Me" class="myPic" />
+        <img
+          src={withBase("/assets/profile/myPic.jpg")}
+          alt="Me"
+          class="myPic"
+        />
       </div>
     </div>
     <div class="homeProjectsSection">
       <div class="homeProjectsHeader">
         <h2>Projects</h2>
-        <a href="/projects" class="seeAllProjectsLink">See all projects</a>
+        <a href={withBase("/projects")} class="seeAllProjectsLink"
+          >See all projects</a
+        >
       </div>
       <div class="homeProjectGrid">
         {projects.map((project) => <ProjectCard {...project} />)}

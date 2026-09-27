@@ -1,5 +1,6 @@
 ---
 import "../styles/components/skills.css";
+import { withBase } from "../utils/withBase";
 ---
 
 <div class="homeSkillsSection">
@@ -8,12 +9,12 @@ import "../styles/components/skills.css";
     <div class="homeSkillsGroup">
       <div class="homeSkillsGroupHeader">
         <img
-          src="/logos/certifications-icon.png"
+          src={withBase("/logos/certifications-icon.png")}
           alt="Certifications"
           class="homeSkillsGroupIcon"
         />
         <h3>
-          <a href="/certifications" class="homeSkillsGroupLink">
+          <a href={withBase("/certifications")} class="homeSkillsGroupLink">
             Certifications
           </a>
         </h3>
@@ -26,7 +27,7 @@ import "../styles/components/skills.css";
     <div class="homeSkillsGroup">
       <div class="homeSkillsGroupHeader">
         <img
-          src="/logos/backend-icon.png"
+          src={withBase("/logos/backend-icon.png")}
           alt="Backend"
           class="homeSkillsGroupIcon"
         />
@@ -45,7 +46,7 @@ import "../styles/components/skills.css";
     <div class="homeSkillsGroup">
       <div class="homeSkillsGroupHeader">
         <img
-          src="/logos/other-icon.png"
+          src={withBase("/logos/other-icon.png")}
           alt="Other Technologies"
           class="homeSkillsGroupIcon"
         />

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import "../../styles/pages/projects/building-energy-predictor.css";
+import { withBase } from "../../utils/withBase";
 ---
 
 <BaseLayout title="Building Energy Predictor | Jack Lockhart">
@@ -8,7 +9,9 @@ import "../../styles/pages/projects/building-energy-predictor.css";
     <h1 class="title">Building Energy Predictor</h1>
     <div class="imageSection">
       <img
-        src="/assets/projects/building-energy-predictor/buildingEnergyPredictor.png"
+        src={withBase(
+          "/assets/projects/building-energy-predictor/buildingEnergyPredictor.png",
+        )}
         alt="Project"
         class="projectImage"
       />

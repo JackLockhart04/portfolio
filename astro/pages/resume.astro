@@ -1,13 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/pages/resume.css";
+import { withBase } from "../utils/withBase";
 ---
 
 <BaseLayout title="Résumé | Jack Lockhart">
   <div class="resumeContainer">
     <div class="resumeHeader">
       <a
-        href="/assets/resume/Jack_Lockhart_Resume.pdf"
+        href={withBase("/assets/resume/Jack_Lockhart_Resume.pdf")}
         download
         class="downloadButton"
       >
@@ -16,7 +17,7 @@ import "../styles/pages/resume.css";
     </div>
     <div class="resumeContent">
       <img
-        src="/assets/resume/Jack_Lockhart_Resume.png"
+        src={withBase("/assets/resume/Jack_Lockhart_Resume.png")}
         alt="Resume"
         class="resumeImage"
       />

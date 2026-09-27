@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar.astro";
 import ContactFooter from "../components/ContactFooter.astro";
 import "../styles/global.css";
+import { withBase } from "../utils/withBase";
 
 interface Props {
   title?: string;
@@ -17,7 +18,7 @@ const { title = "Jack Lockhart" } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="portfolio" content="Jack Lockhart Portfolio" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href={withBase("/favicon.ico")} />
     <title>{title}</title>
   </head>
   <body>
