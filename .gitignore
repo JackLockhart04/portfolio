@@ -11,6 +11,7 @@
 # production
 /dist
 /.astro
+/public/assets/resume/Jack_Lockhart_Resume.generated.png
 
 # misc
 .DS_Store

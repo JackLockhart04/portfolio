@@ -32,7 +32,15 @@
 }
 
 .resumeImage {
+  display: block;
   width: 100%;
   height: auto;
-  border: none; /* Remove border */
+  border: none;
+  background-color: white;
+}
+
+@media (max-width: 600px) {
+  .resumeContainer {
+    padding: 12px;
+  }
 }

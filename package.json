@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "render:resume": "node scripts/render-resume.mjs",
+    "prestart": "npm run render:resume",
     "start": "astro dev",
+    "predev": "npm run render:resume",
     "dev": "astro dev",
+    "prebuild": "npm run render:resume",
     "build": "astro build",
     "preview": "astro preview",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@napi-rs/canvas": "^1.0.9",
     "@types/node": "^26.6.2",
     "astro": "^7.3.3",
+    "pdfjs-dist": "^6.3.289",
     "typescript": "^7.0.2"
   }
 }
