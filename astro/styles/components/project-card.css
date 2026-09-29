@@ -48,16 +48,6 @@
   font-size: 1.3rem;
 }
 
-.projectCardNameLink {
-  text-decoration: none;
-  color: var(--color-link); /* Link color */
-  transition: color 0.3s ease;
-}
-
-.projectCardNameLink:hover {
-  color: var(--color-primary-600); /* Darker primary on hover */
-}
-
 .projectCardDescription {
   font-size: 0.875rem; /* Smaller font size for the description */
   color: var(--color-muted); /* Less bright text color */
@@ -74,27 +64,7 @@
 }
 
 .projectCardButton {
-  display: inline-block;
   margin-top: 0;
-  padding: 10px 20px;
-  background-color: var(--color-primary); /* CTA background color */
-  color: var(--color-primary-foreground); /* CTA text color */
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.projectCardButton:hover {
-  background-color: var(--color-primary-600); /* Darker primary on hover */
-}
-
-.projectCardButton.secondary {
-  /* Secondary button removed — keep styles in case it's reused later */
-  display: none;
-}
-
-.projectCardButton.secondary:hover {
-  background: rgba(255, 255, 255, 0.02);
 }
 
 .projectCardSiteLinkText {

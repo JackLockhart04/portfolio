@@ -1,42 +1,47 @@
 ---
 import "../styles/components/project-card.css";
+import { withBase } from "../utils/withBase";
 
 interface Props {
+  slug: string;
   name: string;
   image: string;
-  skills: string;
+  imageAlt: string;
+  skills: string[];
   description: string;
-  projectLink: string;
-  siteLink?: string;
+  siteUrl?: string;
 }
 
-const { name, image, skills, description, projectLink, siteLink } = Astro.props;
+const { slug, name, image, imageAlt, skills, description, siteUrl } = Astro.props;
+const projectLink = withBase(`/projects/${slug}`);
 ---
 
 <div class="projectCard">
   <div class="projectCardImageSection">
-    <img src={image} alt="Project" class="projectCardImage" />
+    <img src={withBase(image)} alt={imageAlt} class="projectCardImage" />
   </div>
   <div class="projectCardSkillsSection">
-    <p class="projectCardSkillsText">{skills}</p>
+    <p class="projectCardSkillsText">{skills.join(", ")}</p>
   </div>
   <div class="projectCardDescriptionSection">
     <h2 class="projectCardName">{name}</h2>
     <p class="projectCardDescription">{description}</p>
   </div>
   <div class="projectCardLinkSection">
-    <a href={projectLink} class="projectCardButton">View Project Page</a>
+    <a href={projectLink} class="button button--primary projectCardButton">
+      View Project Page
+    </a>
     {
-      siteLink && (
+      siteUrl && (
         <p class="projectCardSiteLinkText">
           <span>Visit site here:</span>
           <a
-            href={siteLink}
+            href={siteUrl}
             target="_blank"
             rel="noopener noreferrer"
             class="projectCardSiteLink"
           >
-            {siteLink}
+            {siteUrl}
           </a>
         </p>
       )

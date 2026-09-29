@@ -1,39 +1,28 @@
 ---
 import "../styles/components/contact-footer.css";
+import { contactMethods } from "../data/site";
 ---
 
 <footer class="contactFooter">
   <h2 class="contactFooterHeader">Contact Information</h2>
-  <div class="contactFooterItem">
-    <h3>Phone</h3>
-    <p>(205) 569-8341</p>
-  </div>
-  <div class="contactFooterItem">
-    <h3>Email</h3>
-    <p><a href="mailto:jrlockhart04@gmail.com">jrlockhart04@gmail.com</a></p>
-  </div>
-  <div class="contactFooterItem">
-    <h3>LinkedIn</h3>
-    <p>
-      <a
-        href="https://www.linkedin.com/in/jack-r-lockhart/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn Profile
-      </a>
-    </p>
-  </div>
-  <div class="contactFooterItem">
-    <h3>GitHub</h3>
-    <p>
-      <a
-        href="https://github.com/JackLockhart04"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub Profile
-      </a>
-    </p>
-  </div>
+  {
+    contactMethods.map((method) => (
+      <div class="contactFooterItem">
+        <h3>{method.label}</h3>
+        <p>
+          {method.href ? (
+            <a
+              href={method.href}
+              target={method.external ? "_blank" : undefined}
+              rel={method.external ? "noopener noreferrer" : undefined}
+            >
+              {method.value}
+            </a>
+          ) : (
+            method.value
+          )}
+        </p>
+      </div>
+    ))
+  }
 </footer>

@@ -4,36 +4,11 @@ import ProjectCard from "../components/ProjectCard.astro";
 import Skills from "../components/Skills.astro";
 import "../styles/pages/home.css";
 import { withBase } from "../utils/withBase";
+import { getCollection } from "astro:content";
 
-const projects = [
-  {
-    name: "StocksInSeconds.com",
-    image: withBase("/assets/projects/stocks-in-seconds/stocksInSeconds.png"),
-    skills: "Python, Flask, Javascript, AWS services, APIs",
-    description:
-      "Full stack website for a startup business. I had to learn how to deploy a backend on AWS and manage all the security features such as authentication, cookies management, and Stripe integration.",
-    projectLink: withBase("/projects/stocksinseconds"),
-  },
-  {
-    name: "Building Energy Predictor",
-    image: withBase(
-      "/assets/projects/building-energy-predictor/buildingEnergyPredictor.png",
-    ),
-    skills: "Python, Jupyter Notebook, Machine Learning, APIs",
-    description:
-      "A machine learning model that predicts the energy usage of a building based on various features such as weather data and building characteristics.",
-    projectLink: withBase("/projects/buildingenergypredictor"),
-    siteLink: "https://jacklockhart04.github.io/building_energy_predictor/",
-  },
-  {
-    name: "Password Manager",
-    image: withBase("/assets/projects/password-manager/password_gen.png"),
-    skills: "Cryptography, Password Security, JavaScript",
-    description:
-      "Browser-based generator and local vault emphasizing cryptographic correctness: Web Crypto RNG, rejection-sampled generation, PBKDF2 key derivation and AES-GCM storage. Includes strength meters and explicit, auditable generation controls.",
-    projectLink: withBase("/projects/password-manager"),
-  },
-];
+const projects = (await getCollection("projects")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
 ---
 
 <BaseLayout>
@@ -49,9 +24,13 @@ const projects = [
           just completed my Network+ and Security+ certifications and working
           towards my CCNA certification.
         </p>
-        <div class="heroCtas" style="margin-top: 16px">
-          <a href={withBase("/projects")} class="btn primary">View Projects</a>
-          <a href={withBase("/resume")} class="btn outline">Résumé</a>
+        <div class="heroCtas">
+          <a href={withBase("/projects")} class="button button--primary">
+            View Projects
+          </a>
+          <a href={withBase("/resume")} class="button button--outline">
+            Résumé
+          </a>
         </div>
       </div>
       <div id="headshotSection">
@@ -70,7 +49,19 @@ const projects = [
         >
       </div>
       <div class="homeProjectGrid">
-        {projects.map((project) => <ProjectCard {...project} />)}
+        {
+          projects.map((project) => (
+            <ProjectCard
+              slug={project.id}
+              name={project.data.name}
+              image={project.data.image}
+              imageAlt={project.data.imageAlt}
+              skills={project.data.skills}
+              description={project.data.description}
+              siteUrl={project.data.siteUrl}
+            />
+          ))
+        }
       </div>
     </div>
     <Skills />

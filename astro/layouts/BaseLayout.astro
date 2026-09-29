@@ -3,12 +3,13 @@ import Navbar from "../components/Navbar.astro";
 import ContactFooter from "../components/ContactFooter.astro";
 import "../styles/global.css";
 import { withBase } from "../utils/withBase";
+import { site } from "../data/site";
 
 interface Props {
   title?: string;
 }
 
-const { title = "Jack Lockhart" } = Astro.props;
+const { title = site.name } = Astro.props;
 ---
 
 <!doctype html>
