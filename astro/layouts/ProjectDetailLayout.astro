@@ -1,0 +1,19 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import "../styles/pages/project-detail.css";
+import { site } from "../data/site";
+
+interface Props {
+  title: string;
+  heading?: string;
+}
+
+const { title, heading = title } = Astro.props;
+---
+
+<BaseLayout title={`${title} | ${site.name}`}>
+  <main class="projectDetail">
+    <h1 class="projectDetailTitle">{heading}</h1>
+    <slot />
+  </main>
+</BaseLayout>
