@@ -1,0 +1,51 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection, render } from "astro:content";
+import ProjectDetailLayout from "../../layouts/ProjectDetailLayout.astro";
+import ProjectMedia from "../../components/ProjectMedia.astro";
+import ProjectPanel from "../../components/ProjectPanel.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const contentComponents = { ProjectMedia, ProjectPanel };
+---
+
+<ProjectDetailLayout
+  title={project.data.name}
+  heading={project.data.heading}
+>
+  <ProjectMedia
+    src={project.data.image}
+    alt={project.data.imageAlt}
+    bordered={project.data.imageBordered}
+    variant={project.data.imageVariant}
+  />
+  {
+    project.data.siteUrl && (
+      <div class="projectDetailActions">
+        <a
+          href={project.data.siteUrl}
+          class="button button--primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit site
+        </a>
+      </div>
+    )
+  }
+  <Content components={contentComponents} />
+</ProjectDetailLayout>

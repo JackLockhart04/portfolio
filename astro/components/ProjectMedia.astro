@@ -1,0 +1,24 @@
+---
+import { withBase } from "../utils/withBase";
+
+interface Props {
+  src: string;
+  alt: string;
+  bordered?: boolean;
+  variant?: "generator" | "vault";
+}
+
+const { src, alt, bordered = false, variant } = Astro.props;
+const mediaClasses = [
+  "projectDetailMedia",
+  bordered && "projectDetailMedia--bordered",
+];
+const imageClasses = [
+  "projectDetailImage",
+  variant && `projectDetailImage--${variant}`,
+];
+---
+
+<div class:list={mediaClasses}>
+  <img src={withBase(src)} alt={alt} class:list={imageClasses} />
+</div>

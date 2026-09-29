@@ -2,8 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import "../styles/pages/projects.css";
-import { projects } from "../data/projects";
 import { site } from "../data/site";
+import { getCollection } from "astro:content";
+
+const projects = (await getCollection("projects")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
 ---
 
 <BaseLayout title="Projects | Jack Lockhart">
@@ -20,7 +24,19 @@ import { site } from "../data/site";
       </a>
     </div>
     <div class="projectsGrid">
-      {projects.map((project) => <ProjectCard {...project} />)}
+      {
+        projects.map((project) => (
+          <ProjectCard
+            slug={project.id}
+            name={project.data.name}
+            image={project.data.image}
+            imageAlt={project.data.imageAlt}
+            skills={project.data.skills}
+            description={project.data.description}
+            siteUrl={project.data.siteUrl}
+          />
+        ))
+      }
     </div>
   </div>
 </BaseLayout>
