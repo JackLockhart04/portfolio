@@ -1,76 +1,307 @@
 .homeContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 28px;
 }
 
-#aboutMeContainer {
-  display: flex;
+.homeContainer::before {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: -1;
+  height: 760px;
+  background-image:
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px),
+    radial-gradient(circle at 78% 35%, var(--color-glow), transparent 28%);
+  background-size: 48px 48px, 48px 48px, auto;
+  content: "";
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+}
+
+.homeContainer main {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   align-items: center;
-  /* justify-content: space-between; */
-  width: 100%;
-  height: 800px;
-  max-width: 1200px;
-  gap: 80px;
+  min-height: 720px;
+  gap: clamp(48px, 8vw, 112px);
+  padding: 72px 0 80px;
 }
 
 .aboutMeText {
-  flex: 1;
-  padding: 20px;
   text-align: left;
-  line-height: 1.6; /* Increase line spacing */
+}
+
+.heroEyebrow,
+.sectionLabel {
+  margin: 0 0 20px;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heroEyebrow > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 14px var(--color-primary);
+}
+
+.aboutMeText h1 {
+  max-width: 700px;
+  margin: 0;
+  font-size: clamp(3.3rem, 8vw, 6.6rem);
+  font-weight: 700;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+}
+
+.heroRole {
+  margin: 22px 0;
+  color: var(--color-text-soft);
+  font-family: var(--font-mono);
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.heroRole span {
+  padding: 0 8px;
+  color: var(--color-primary);
+}
+
+.aboutMeParagraph {
+  max-width: 650px;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 1.02rem;
+  line-height: 1.8;
 }
 
 .heroCtas {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  margin-top: 16px;
+  margin-top: 30px;
+}
+
+.heroCtas .button--primary {
+  gap: 16px;
+}
+
+.heroDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 50px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-soft);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.heroDetails span {
+  margin-right: 6px;
+  color: var(--color-primary);
 }
 
 #headshotSection {
-  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.portraitFrame {
+  position: relative;
+  width: min(100%, 390px);
+  padding: 10px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-panel);
+}
+
+.portraitFrame::before,
+.portraitFrame::after {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-color: var(--color-primary);
+  content: "";
+}
+
+.portraitFrame::before {
+  top: -7px;
+  left: -7px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.portraitFrame::after {
+  right: -7px;
+  bottom: -7px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.portraitBar,
+.portraitCaption {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  height: 30px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.portraitBar {
+  gap: 6px;
+  padding: 0 2px;
+}
+
+.portraitBar span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-border-strong);
+}
+
+.portraitBar span:first-child {
+  background: var(--color-primary);
+}
+
+.portraitBar code {
+  margin-left: auto;
+  color: var(--color-muted);
 }
 
 .myPic {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  border-radius: 50%; /* Make the image a circle */
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 25%;
+  filter: saturate(0.8) contrast(1.04);
 }
 
-.homeProjectsSection {
-  width: 100%;
-  max-width: 1200px;
-  margin: 40px auto;
-  text-align: left;
+.portraitCaption {
+  justify-content: space-between;
+  color: var(--color-text-soft);
+}
+
+.portraitCaption span:first-child {
+  color: var(--color-primary);
+}
+
+.homeProjectsSection,
+.homeSkillsSection {
+  scroll-margin-top: 80px;
+  padding: 110px 0;
+  border-top: 1px solid var(--color-border);
 }
 
 .homeProjectsHeader {
   display: flex;
+  align-items: end;
   justify-content: space-between;
-  align-items: center;
+  gap: 20px;
+  margin-bottom: 42px;
+}
+
+.homeProjectsHeader h2,
+.homeSkillsHeader {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  letter-spacing: -0.04em;
+}
+
+.sectionLabel {
+  margin-bottom: 10px;
 }
 
 .seeAllProjectsLink {
-  color: var(--color-link); /* Link color */
+  flex: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--color-primary);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
   text-decoration: none;
-  font-size: 1rem;
+  text-transform: uppercase;
 }
 
-.seeAllProjectsLink:hover {
-  text-decoration: underline;
+.seeAllProjectsLink span {
+  color: var(--color-primary);
 }
 
 .homeProjectGrid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 880px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 96px;
+  }
+
+  #headshotSection {
+    justify-content: flex-start;
+  }
+
+  .portraitFrame {
+    width: min(100%, 520px);
+  }
+
+  .homeProjectGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .homeContainer {
+    padding: 0 18px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 72px 0;
+  }
+
+  .aboutMeText h1 {
+    font-size: clamp(3.1rem, 17vw, 4.8rem);
+  }
+
+  .heroDetails {
+    gap: 12px 18px;
+  }
+
+  .homeProjectsSection,
+  .homeSkillsSection {
+    padding: 78px 0;
+  }
+
+  .homeProjectsHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

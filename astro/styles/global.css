@@ -1,123 +1,166 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap");
 
 :root {
-  /* Color tokens — change these to update the site theme */
-  --color-bg: #121212; /* Page background */
-  --color-surface: #0f1720; /* Elevated surfaces (cards, panels) */
-  --color-text: #ffffff; /* Primary text color */
-  --color-muted: #b0b0b0; /* Muted / secondary text */
-  --color-primary: #007bff; /* Brand primary — CTAs #007bff; */
-  --color-primary-foreground: #ffffff; /* Text color on primary backgrounds */
-
-  /* Additional tokens for broader theming */
-  --color-secondary: #6c757d; /* Secondary accent color */
-  --color-accent: #ffd166; /* Decorative accents / highlights */
-  --color-link: #007bff; /* Link color */
-  --color-border: #1f2933; /* Borders and dividers */
-  --color-header-bg: #303030; /* Navbar / header background */
-  --color-footer-bg: #303030; /* Footer background */
-  --color-success: #16a34a; /* Success / positive states */
-  --color-warning: #f59e0b; /* Warning / attention */
-  --color-danger: #dc2626; /* Error / danger */
-  --color-focus: #80b7ff; /* Focus ring / accessibility outlines */
-  --color-surface-foreground: var(--color-text); /* Text color on surfaces */
-  --color-surface-variant: #1b1b1b; /* Alternate surface for cards */
-  --color-code-bg: #0b1220; /* Inline code / code block background */
-  --color-overlay: rgba(0, 0, 0, 0.6); /* Modal/backdrop overlay */
-  --color-primary-600: #0056b3; /* Darker primary (hover states) */
-  /* Spacing scale */
+  color-scheme: dark;
+  --color-bg: #071014;
+  --color-surface: #0b171c;
+  --color-surface-raised: #0d1b21;
+  --color-surface-variant: #0a151a;
+  --color-text: #eef5f6;
+  --color-text-soft: #bdc9cc;
+  --color-muted: #8e9da1;
+  --color-primary: #4de3c1;
+  --color-primary-foreground: #03110e;
+  --color-primary-600: #78ecd2;
+  --color-secondary: #71858a;
+  --color-accent: #4de3c1;
+  --color-link: #5de6c7;
+  --color-border: rgba(170, 206, 210, 0.15);
+  --color-border-strong: rgba(120, 220, 204, 0.3);
+  --color-header-bg: rgba(7, 16, 20, 0.82);
+  --color-footer-bg: #050c0f;
+  --color-grid: rgba(93, 230, 199, 0.055);
+  --color-glow: rgba(77, 227, 193, 0.1);
+  --color-success: #4de3c1;
+  --color-warning: #f2c572;
+  --color-danger: #ff7a85;
+  --color-focus: #71ebd0;
+  --color-surface-foreground: var(--color-text);
+  --color-code-bg: #051014;
+  --color-overlay: rgba(0, 0, 0, 0.65);
+  --shadow-panel: 0 30px 80px rgba(0, 0, 0, 0.3);
+  --font-sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
   --space-xxs: 4px;
   --space-xs: 8px;
   --space-sm: 12px;
   --space-md: 20px;
   --space-lg: 32px;
   --space-xl: 48px;
+}
 
-  /* Typography */
-  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-bg);
-  color: var(--color-text);
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
 }
 
 code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New",
-    monospace;
+  font-family: var(--font-mono);
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
+  min-height: 46px;
+  padding: 11px 19px;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 2px;
   font: inherit;
+  font-size: 0.82rem;
   font-weight: 600;
+  letter-spacing: 0.025em;
   text-decoration: none;
   cursor: pointer;
   transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease;
+    transform 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
 }
 
 .button--primary {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   color: var(--color-primary-foreground);
 }
 
 .button--primary:hover {
-  background-color: var(--color-primary-600);
+  background: var(--color-primary-600);
 }
 
 .button--outline {
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-variant);
   color: var(--color-text);
-  background-color: transparent;
-  border-color: var(--color-border);
 }
 
 .button--outline:hover {
-  background-color: var(--color-surface);
+  border-color: var(--color-primary);
+  background: var(--color-surface);
 }
 
-/*
-  Follow the user's system color scheme automatically.
-  When the OS/browser indicates a light preference, these variable
-  overrides will be applied so the site uses the light theme.
-  This requires no JavaScript and gives users a consistent experience
-  that follows their system settings.
-*/
 @media (prefers-color-scheme: light) {
   :root {
-    --color-bg: #ffffff;
-    --color-surface: #f6f7f9;
-    --color-text: #0b1220;
-    --color-muted: #6b7280;
-    --color-primary: #007bff;
-    --color-primary-foreground: #ffffff;
-
-    /* Additional light-theme tokens */
-    --color-secondary: #6c757d;
-    --color-accent: #ffd166;
-    --color-link: var(--color-primary);
-    --color-border: #e6e9ef;
-    --color-header-bg: #f2f4f7;
-    --color-footer-bg: #f2f4f7;
-    --color-success: #16a34a;
-    --color-warning: #f59e0b;
-    --color-danger: #dc2626;
-    --color-focus: #80b7ff;
-    --color-surface-foreground: var(--color-text);
+    color-scheme: light;
+    --color-bg: #f4f7f8;
+    --color-surface: #eaf0f1;
+    --color-surface-raised: #ffffff;
     --color-surface-variant: #ffffff;
-    --color-code-bg: #f3f4f6;
-    --color-overlay: rgba(0, 0, 0, 0.4);
-    --color-primary-600: #0056b3;
+    --color-text: #102126;
+    --color-text-soft: #42585e;
+    --color-muted: #5f7378;
+    --color-primary: #087f6d;
+    --color-primary-foreground: #ffffff;
+    --color-primary-600: #066b5d;
+    --color-secondary: #5d7277;
+    --color-accent: #087f6d;
+    --color-link: #087565;
+    --color-border: rgba(25, 70, 75, 0.14);
+    --color-border-strong: rgba(8, 127, 109, 0.32);
+    --color-header-bg: rgba(244, 247, 248, 0.88);
+    --color-footer-bg: #e7edef;
+    --color-grid: rgba(8, 127, 109, 0.055);
+    --color-glow: rgba(8, 127, 109, 0.08);
+    --color-success: #087f6d;
+    --color-warning: #9a6411;
+    --color-danger: #b83242;
+    --color-focus: #087f6d;
+    --color-surface-foreground: var(--color-text);
+    --color-code-bg: #e6edef;
+    --color-overlay: rgba(16, 33, 38, 0.35);
+    --shadow-panel: 0 28px 70px rgba(27, 62, 68, 0.14);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
   }
 }
