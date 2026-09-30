@@ -4,14 +4,9 @@ import { withBase } from "../utils/withBase";
 ---
 
 <nav class="navbar">
-  <div class="navLeft">
-    <div class="navLinkBox">
-      <a href={withBase()} class="navLink">Home</a>
-    </div>
-    <div class="navLinkBox">
-      <a href={withBase("/contact")} class="navLink">Contact</a>
-    </div>
-  </div>
+  <a href={withBase()} class="navBrand" aria-label="Jack Lockhart — home">
+    Jack Lockhart
+  </a>
   <div class="navRight">
     <div class="navLinkBox">
       <a href={withBase("/resume")} class="navLink">Resume</a>
@@ -21,6 +16,9 @@ import { withBase } from "../utils/withBase";
     </div>
     <div class="navLinkBox">
       <a href={withBase("/projects")} class="navLink">Projects</a>
+    </div>
+    <div class="navLinkBox">
+      <a href={withBase("/contact")} class="navLink">Contact</a>
     </div>
   </div>
 </nav>

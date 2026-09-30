@@ -28,23 +28,20 @@ const projectLink = withBase(`/projects/${slug}`);
     <p class="projectCardDescription">{description}</p>
   </div>
   <div class="projectCardLinkSection">
-    <a href={projectLink} class="button button--primary projectCardButton">
-      View Project Page
-    </a>
     {
       siteUrl && (
-        <p class="projectCardSiteLinkText">
-          <span>Visit site here:</span>
-          <a
-            href={siteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="projectCardSiteLink"
-          >
-            {siteUrl}
-          </a>
-        </p>
+        <a
+          href={siteUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="projectCardSiteLink"
+        >
+          Visit live site <span aria-hidden="true">↗</span>
+        </a>
       )
     }
+    <a href={projectLink} class="button button--primary projectCardButton">
+      View project
+    </a>
   </div>
 </div>
