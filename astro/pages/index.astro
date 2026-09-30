@@ -42,35 +42,24 @@ const projects = (await getCollection("projects")).sort(
             </a>
           </div>
           <ul class="heroDetails" aria-label="Professional focus">
-            <li><span>01</span> Security</li>
-            <li><span>02</span> Cloud</li>
-            <li><span>03</span> AI systems</li>
+            <li>Security</li>
+            <li>Cloud</li>
+            <li>AI systems</li>
           </ul>
         </div>
         <div id="headshotSection">
           <div class="portraitFrame">
-            <div class="portraitBar" aria-hidden="true">
-              <span></span><span></span><span></span>
-              <code>profile.img</code>
-            </div>
             <img
               src={withBase("/assets/profile/myPic.jpg")}
               alt="Jack Lockhart"
               class="myPic"
             />
-            <div class="portraitCaption" aria-hidden="true">
-              <span>STATUS: ONLINE</span>
-              <span>UA // CS</span>
-            </div>
           </div>
         </div>
       </section>
       <section class="homeProjectsSection" aria-labelledby="projects-title">
         <div class="homeProjectsHeader">
-          <div>
-            <p class="sectionLabel">01 // SELECTED WORK</p>
-            <h2 id="projects-title">Featured projects</h2>
-          </div>
+          <h2 id="projects-title">Featured projects</h2>
           <a href={withBase("/projects")} class="seeAllProjectsLink"
             >All projects <span aria-hidden="true">→</span></a
           >

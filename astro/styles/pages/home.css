@@ -36,8 +36,7 @@
   text-align: left;
 }
 
-.heroEyebrow,
-.sectionLabel {
+.heroEyebrow {
   margin: 0 0 20px;
   color: var(--color-primary);
   font-family: var(--font-mono);
@@ -118,78 +117,16 @@
   text-transform: uppercase;
 }
 
-.heroDetails span {
-  margin-right: 6px;
-  color: var(--color-primary);
-}
-
 #headshotSection {
   display: flex;
   justify-content: center;
 }
 
 .portraitFrame {
-  position: relative;
   width: min(100%, 390px);
-  padding: 10px;
   border: 1px solid var(--color-border-strong);
   background: var(--color-surface-raised);
-  box-shadow: var(--shadow-panel);
-}
-
-.portraitFrame::before,
-.portraitFrame::after {
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  border-color: var(--color-primary);
-  content: "";
-}
-
-.portraitFrame::before {
-  top: -7px;
-  left: -7px;
-  border-top: 1px solid;
-  border-left: 1px solid;
-}
-
-.portraitFrame::after {
-  right: -7px;
-  bottom: -7px;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
-}
-
-.portraitBar,
-.portraitCaption {
-  display: flex;
-  align-items: center;
-  height: 30px;
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-
-.portraitBar {
-  gap: 6px;
-  padding: 0 2px;
-}
-
-.portraitBar span {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-border-strong);
-}
-
-.portraitBar span:first-child {
-  background: var(--color-primary);
-}
-
-.portraitBar code {
-  margin-left: auto;
-  color: var(--color-muted);
+  overflow: hidden;
 }
 
 .myPic {
@@ -199,15 +136,6 @@
   object-fit: cover;
   object-position: center 25%;
   filter: saturate(0.8) contrast(1.04);
-}
-
-.portraitCaption {
-  justify-content: space-between;
-  color: var(--color-text-soft);
-}
-
-.portraitCaption span:first-child {
-  color: var(--color-primary);
 }
 
 .homeProjectsSection,
@@ -230,10 +158,6 @@
   margin: 0;
   font-size: clamp(2rem, 5vw, 3.25rem);
   letter-spacing: -0.04em;
-}
-
-.sectionLabel {
-  margin-bottom: 10px;
 }
 
 .seeAllProjectsLink {
